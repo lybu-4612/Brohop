@@ -10,7 +10,7 @@ from store.models import Product,ReviewRating
 def home(request):
         try:
                 products = Product.objects.all().filter(is_available=True).order_by('-created_date')
-         except:
+        except:
                 return render(request, 'home.html')  
 #         for product in products:
 #                 try:
